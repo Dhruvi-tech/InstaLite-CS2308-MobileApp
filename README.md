@@ -1,143 +1,120 @@
-# 📸 Insta Lite - React Native Instagram Clone
-
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&labelColor=121212)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=1f1f1f&labelColor=121212)
-
----
+# Insta Lite
 
 <p align="center">
-	<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff7a18,100:ff4f81&height=150&section=header&text=Insta%20Lite&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38"/>
+	<img src="https://img.shields.io/badge/Status-Active-1b1f23?style=flat-square" />
+	<img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-1b1f23?style=flat-square" />
+	<img src="https://img.shields.io/badge/UI-Dark%20Instagram%20Style-1b1f23?style=flat-square" />
+	<img src="https://img.shields.io/badge/Stack-React%20Native%20CLI-1b1f23?style=flat-square" />
 </p>
 
 <p align="center">
-	<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=23&duration=2800&pause=700&color=FF4F81&center=true&vCenter=true&width=650&lines=Instagram-inspired+React+Native+experience;Dark+theme+UI+with+emoji+icons;Stories%2C+Feed%2C+Profile%2C+Camera+Mock"/>
+	<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="divider" />
 </p>
 
-<p align="center">
-	<b>A clean, modern Instagram-style mobile app built with React Native CLI.</b><br/>
-	<i>Fast • Smooth • Minimal • Dark UI</i>
-</p>
+## What This Is
 
----
+Insta Lite is a lightweight Instagram-inspired mobile app built in React Native.
+It focuses on clean interaction patterns and UI polish without adding extra dependencies.
 
-## ✨ Highlights
+### Core Experience
 
-- Login and Register flow with polished dark UI
-- Instagram-style Home feed
-- Stories strip with circular avatars and gradient-like ring style
-- Post interactions with emoji actions: ❤️ 💬 ✈️
-- Like toggle support (❤️ / 🤍)
-- Double-tap image to like
-- Camera screen simulation (permission denied UI, no camera library)
-- Profile page with stats and media grid
-- Bottom tabs with emoji navigation: 🏠 🔍 ➕ 👤
+- Auth entry: Login + Register
+- Feed with stories and post cards
+- Emoji-based interactions: ❤️ 💬 ✈️
+- Like toggle and double-tap to like
+- Camera mock screen with permission denied state
+- Profile with stats and media grid
 
----
+## Quick Visual Summary
 
-## 🧭 App Flow
+| Area | Style | Behavior |
+|---|---|---|
+| Home | Dark feed cards, rounded media | Tap like and double-tap image support |
+| Stories | Circular avatars with warm ring | Horizontal story strip |
+| Camera | Pure black mock UI | Close button + capture button + denied message |
+| Profile | Balanced stat row + grid | Uses remote placeholder images |
+| Tabs | Emoji-first navigation | 🏠 🔍 ➕ 👤 |
+
+## Interaction Map
 
 ```text
-Login -> Register -> Home Feed -> Camera Mock -> Profile
+Login
+	-> Register
+	-> Tabs
+			 -> Home
+						-> Camera (from add / shortcut)
+			 -> Search
+			 -> Add
+						-> Camera
+			 -> Profile
 ```
 
----
-
-## 🛠️ Tech Stack
-
-<p align="center">
-	<img src="https://skillicons.dev/icons?i=react,js,git&perline=3" />
-</p>
-
-- React Native CLI
-- JavaScript (ES6+)
-- React Navigation
-
----
-
-## 🧱 Project Structure
+## Project Layout
 
 ```text
 src/
 	navigation/
-		BottomTabs.js
 		MainStack.js
+		BottomTabs.js
 	screens/
+		LoginScreen.js
+		RegisterScreen.js
+		HomeScreen.js
+		SearchScreen.js
 		AddScreen.js
 		CameraScreen.js
-		HomeScreen.js
-		LoginScreen.js
 		ProfileScreen.js
-		RegisterScreen.js
-		SearchScreen.js
 ```
 
----
+## Design Decisions
 
-## 🚀 Run Locally
+### Why It Feels Instagram-Like
 
-### 1) Prerequisites
+- Strong black canvas for contrast
+- Soft card radius and image rounding
+- Familiar interaction rhythm (story row, action row, profile grid)
+- Lightweight icon language via emojis
 
-- Node.js LTS
-- React Native environment configured
-- Android Studio (Android) and/or Xcode (iOS)
+### Constraints Honored
 
-### 2) Install dependencies
+- No new dependencies for UI
+- No local image assets required for screens
+- Remote placeholders used for feed/profile/stories
+- No camera SDK integration
+
+## Run It
+
+### Setup
 
 ```bash
 npm install
 ```
 
-### 3) Start Metro
+### Start Metro
 
 ```bash
 npx react-native start
 ```
 
-### 4) Run app
-
-Android:
+### Launch
 
 ```bash
 npx react-native run-android
 ```
 
-iOS:
-
 ```bash
 npx react-native run-ios
 ```
 
----
+## Next Up
 
-## 🎯 Design Rules Followed
-
-- Dark-first layout (`#000` background)
-- Rounded corners and clean spacing
-- Emoji-only interaction icons
-- Placeholder image URLs (no downloaded assets)
-- No new package dependency added for UI changes
-
----
-
-## 🔮 Future Enhancements
-
-- Real backend auth integration
-- Real upload and post creation pipeline
-- Comments and share interactions
-- Push notifications
+- Backend auth and persistent user sessions
+- Real post upload flow
+- Comments and notifications
+- Save/share post interactions
 
 ---
 
 <p align="center">
-	<img src="https://img.shields.io/badge/Built%20With-React%20Native-ff4f81?style=for-the-badge&logo=react&logoColor=white&labelColor=121212"/>
-	<img src="https://img.shields.io/badge/Open%20Source-Project-1f1f1f?style=for-the-badge&logo=github&logoColor=white&labelColor=000000"/>
-</p>
-
-<p align="center">
-	<b>Like this project?</b><br/>
-	⭐ Star the repository and share it with your friends.
-</p>
-
-<p align="center">
-	<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff4f81,100:ff7a18&height=140&section=footer&text=Thanks%20for%20Visiting!&fontSize=30&fontColor=ffffff&animation=fadeIn&fontAlignY=65"/>
+	Built with focus on visual clarity, interaction smoothness, and zero-bloat dependencies.
 </p>
