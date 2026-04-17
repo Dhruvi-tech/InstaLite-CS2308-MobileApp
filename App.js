@@ -14,27 +14,36 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [route, setRoute] = useState('Login');
   const [tab, setTab] = useState('Home');
+  const [homeOpening, setHomeOpening] = useState(false);
+  const [likedPosts, setLikedPosts] = useState({});
+  const [profileBio, setProfileBio] = useState('Creative shots, daily moments, and clean edits.');
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (route === 'Tabs' && tab === 'Home') {
+      setHomeOpening(true);
+      const timer = setTimeout(() => setHomeOpening(false), 600);
+      return () => clearTimeout(timer);
+    }
+
+    return undefined;
+  }, [route, tab]);
+
   if (loading) {
     return (
-      <View style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000'
-      }}>
-        <Text style={{ color: '#fff', fontSize: 24, fontWeight: '700' }}>
-          Insta Lite
-        </Text>
+      <View style={styles.splashWrap}>
+        <View style={styles.splashGlowTop} />
+        <View style={styles.splashGlowBottom} />
+        <Text style={styles.splashTitle}>Insta Lite</Text>
+        <Text style={styles.splashSub}>Share your world</Text>
         <ActivityIndicator
           size="small"
-          color="#fff"
-          style={{ marginTop: 14 }}
+          color="#f8f9fb"
+          style={styles.splashLoader}
         />
       </View>
     );
@@ -66,10 +75,33 @@ export default function App() {
   };
 
   const renderActiveTab = () => {
-    if (tab === 'Home') return <HomeScreen navigation={navigation} />;
+    if (tab === 'Home' && homeOpening) {
+      return (
+        <View style={styles.homeLoadingWrap}>
+          <ActivityIndicator size="small" color="#f8f9fb" />
+          <Text style={styles.homeLoadingText}>Loading feed...</Text>
+        </View>
+      );
+    }
+
+    if (tab === 'Home') {
+      return (
+        <HomeScreen
+          navigation={navigation}
+          likedState={likedPosts}
+          setLikedState={setLikedPosts}
+        />
+      );
+    }
     if (tab === 'Search') return <SearchScreen navigation={navigation} />;
     if (tab === 'Add') return <AddScreen navigation={navigation} />;
-    return <ProfileScreen navigation={navigation} />;
+    return (
+      <ProfileScreen
+        navigation={navigation}
+        bioValue={profileBio}
+        onBioChange={setProfileBio}
+      />
+    );
   };
 
   const renderRoute = () => {
@@ -109,7 +141,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
-        <StatusBar backgroundColor="#000" barStyle="light-content" />
+        <StatusBar backgroundColor="#0f1115" barStyle="light-content" />
         {renderRoute()}
       </SafeAreaProvider>
     </GestureHandlerRootView>
@@ -119,37 +151,89 @@ export default function App() {
 const styles = StyleSheet.create({
   tabsContainer: {
     flex: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#0f1115'
   },
   screenWrap: {
     flex: 1
   },
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: '#000',
+    backgroundColor: '#11141b',
     borderTopWidth: 1,
-    borderTopColor: '#1a1a1a',
-    paddingBottom: 10,
-    paddingTop: 8
+    borderTopColor: '#222834',
+    paddingBottom: 12,
+    paddingTop: 9
   },
   tabButton: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   tabEmoji: {
-    fontSize: 20,
-    opacity: 0.75
+    fontSize: 19,
+    opacity: 0.75,
+    marginBottom: 2
   },
   tabEmojiActive: {
-    opacity: 1
+    opacity: 1,
+    transform: [{ scale: 1.05 }]
   },
   tabLabel: {
-    color: '#888',
+    color: '#9aa0ab',
     fontSize: 11,
-    marginTop: 2,
+    marginTop: 1,
     fontWeight: '600'
   },
   tabLabelActive: {
-    color: '#fff'
+    color: '#f8f9fb'
+  },
+  splashWrap: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#0f1115'
+  },
+  splashGlowTop: {
+    position: 'absolute',
+    width: 260,
+    height: 260,
+    borderRadius: 130,
+    backgroundColor: '#ff8f3a22',
+    top: -40,
+    right: -40
+  },
+  splashGlowBottom: {
+    position: 'absolute',
+    width: 230,
+    height: 230,
+    borderRadius: 115,
+    backgroundColor: '#4da0ff22',
+    bottom: -30,
+    left: -20
+  },
+  splashTitle: {
+    color: '#f8f9fb',
+    fontSize: 34,
+    fontWeight: '700',
+    letterSpacing: 0.4
+  },
+  splashSub: {
+    color: '#b8bdc8',
+    marginTop: 8,
+    fontSize: 14
+  },
+  splashLoader: {
+    marginTop: 16
+  },
+  homeLoadingWrap: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#0f1115'
+  },
+  homeLoadingText: {
+    color: '#b8bdc8',
+    marginTop: 10,
+    fontSize: 13
   }
 });

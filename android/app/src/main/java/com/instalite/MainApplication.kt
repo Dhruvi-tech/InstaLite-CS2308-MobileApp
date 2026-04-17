@@ -1,4 +1,4 @@
-package com.burgerking
+package com.instalite
 
 import android.app.Application
 import com.facebook.react.PackageList
