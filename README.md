@@ -1,98 +1,143 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📸 Insta Lite - React Native Instagram Clone
 
-# Getting Started
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&labelColor=121212)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=1f1f1f&labelColor=121212)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+<p align="center">
+	<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff7a18,100:ff4f81&height=150&section=header&text=Insta%20Lite&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38"/>
+</p>
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+<p align="center">
+	<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=23&duration=2800&pause=700&color=FF4F81&center=true&vCenter=true&width=650&lines=Instagram-inspired+React+Native+experience;Dark+theme+UI+with+emoji+icons;Stories%2C+Feed%2C+Profile%2C+Camera+Mock"/>
+</p>
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+<p align="center">
+	<b>A clean, modern Instagram-style mobile app built with React Native CLI.</b><br/>
+	<i>Fast • Smooth • Minimal • Dark UI</i>
+</p>
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## ✨ Highlights
+
+- Login and Register flow with polished dark UI
+- Instagram-style Home feed
+- Stories strip with circular avatars and gradient-like ring style
+- Post interactions with emoji actions: ❤️ 💬 ✈️
+- Like toggle support (❤️ / 🤍)
+- Double-tap image to like
+- Camera screen simulation (permission denied UI, no camera library)
+- Profile page with stats and media grid
+- Bottom tabs with emoji navigation: 🏠 🔍 ➕ 👤
+
+---
+
+## 🧭 App Flow
+
+```text
+Login -> Register -> Home Feed -> Camera Mock -> Profile
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🛠️ Tech Stack
 
-### Android
+<p align="center">
+	<img src="https://skillicons.dev/icons?i=react,js,git&perline=3" />
+</p>
 
-```sh
-# Using npm
-npm run android
+- React Native CLI
+- JavaScript (ES6+)
+- React Navigation
 
-# OR using Yarn
-yarn android
+---
+
+## 🧱 Project Structure
+
+```text
+src/
+	navigation/
+		BottomTabs.js
+		MainStack.js
+	screens/
+		AddScreen.js
+		CameraScreen.js
+		HomeScreen.js
+		LoginScreen.js
+		ProfileScreen.js
+		RegisterScreen.js
+		SearchScreen.js
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🚀 Run Locally
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### 1) Prerequisites
 
-```sh
-bundle install
+- Node.js LTS
+- React Native environment configured
+- Android Studio (Android) and/or Xcode (iOS)
+
+### 2) Install dependencies
+
+```bash
+npm install
 ```
 
-Then, and every time you update your native dependencies, run:
+### 3) Start Metro
 
-```sh
-bundle exec pod install
+```bash
+npx react-native start
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### 4) Run app
 
-```sh
-# Using npm
-npm run ios
+Android:
 
-# OR using Yarn
-yarn ios
+```bash
+npx react-native run-android
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+iOS:
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+npx react-native run-ios
+```
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 🎯 Design Rules Followed
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- Dark-first layout (`#000` background)
+- Rounded corners and clean spacing
+- Emoji-only interaction icons
+- Placeholder image URLs (no downloaded assets)
+- No new package dependency added for UI changes
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🔮 Future Enhancements
 
-## Congratulations! :tada:
+- Real backend auth integration
+- Real upload and post creation pipeline
+- Comments and share interactions
+- Push notifications
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+<p align="center">
+	<img src="https://img.shields.io/badge/Built%20With-React%20Native-ff4f81?style=for-the-badge&logo=react&logoColor=white&labelColor=121212"/>
+	<img src="https://img.shields.io/badge/Open%20Source-Project-1f1f1f?style=for-the-badge&logo=github&logoColor=white&labelColor=000000"/>
+</p>
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+<p align="center">
+	<b>Like this project?</b><br/>
+	⭐ Star the repository and share it with your friends.
+</p>
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# Burger-king-mad
+<p align="center">
+	<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff4f81,100:ff7a18&height=140&section=footer&text=Thanks%20for%20Visiting!&fontSize=30&fontColor=ffffff&animation=fadeIn&fontAlignY=65"/>
+</p>
