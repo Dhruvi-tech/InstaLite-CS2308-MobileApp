@@ -1,190 +1,80 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Insta%20Lite&fontSize=70&fontColor=ffffff&fontAlignY=38&desc=A%20lightweight%20%E2%80%A2%20smooth%20%E2%80%A2%20minimalist%20Instagram%20clone&descAlignY=58&descSize=18&animation=fadeIn)
-
-</div>
-
-<div align="center">
-
-<img src="https://img.icons8.com/color/96/000000/instagram-new.png" width="72" alt="Insta Lite Logo" />
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:0d0d0d,25:1a0a2e,50:2d1b69,75:1a0a2e,100:0d0d0d&height=300&section=header&text=Insta%20Lite&fontSize=90&fontColor=ffffff&fontAlignY=45&animation=fadeIn&desc=📸%20minimalist%20•%20smooth%20•%20dark&descSize=20&descAlignY=65&descColor=9d8dff&stroke=7c6fff&strokeWidth=3)
 
 <br/>
+<br/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=15&pause=1000&color=9D8DFF&center=true&vCenter=true&width=480&lines=React+Native+%7C+Android+%26+iOS;Zero+bloat.+Pure+feel.+Dark+UI.;Built+for+visual+clarity+%E2%9C%A8" alt="Typing SVG" />
+<br/><br/>
+<br/><br/>
 
 [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev)
-[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org)
+[![Android](https://img.shields.io/badge/Android-0a0f0a?style=for-the-badge&logo=android&logoColor=3DDC84)](https://developer.android.com)
 [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com)
 
-<br/>
-
-[![Stars](https://img.shields.io/github/stars/yourusername/insta-lite?style=flat-square&color=dc2743&labelColor=1a1a1a&logo=github&logoColor=white)](.)
-[![License MIT](https://img.shields.io/badge/License-MIT-bc1888?style=flat-square&labelColor=1a1a1a)](.)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-61dafb?style=flat-square&labelColor=1a1a1a)](.)
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-dc2743?style=flat-square&labelColor=1a1a1a)](.)
-
-<br/>
-
-**[`🌟 About`](#-about-the-project)** &nbsp;•&nbsp;
-**[`🎨 Screens`](#-visual-summary--navigation)** &nbsp;•&nbsp;
-**[`🗺️ Map`](#️-interaction-map)** &nbsp;•&nbsp;
-**[`🏗️ Layout`](#️-project-layout)** &nbsp;•&nbsp;
-**[`🚀 Setup`](#-getting-started)**
-
 </div>
-
-<br/>
 
 ---
 
-<br/>
+## 🌟 About
 
-## 🌟 About The Project
+A zero-bloat Instagram-inspired app built with **React Native CLI**.  
+Clean interactions, seamless dark UI, optimal performance.
 
-> **Insta Lite** is a highly polished, zero-bloat mobile application inspired by Instagram.
-> It strips away the noise and focuses on clean interactions, a seamless dark UI, and optimal performance — without relying on heavy third-party UI libraries.
-
-<br/>
-
-<div align="center">
-
-| &nbsp; | Feature | Description |
-|:---:|:---|:---|
-| 🔐 | **Authentication** | Beautiful login & registration flows with graceful state handling |
-| 📱 | **Dynamic Feed** | Browse stories and media cards with snappy, immersive scrolling |
-| ❤️ | **Interactions** | Heart animations, double-tap to like, and emoji reactions (`❤️` `💬` `✈️`) |
-| 📷 | **Camera UI** | Custom mock camera wrapper handling permissions gracefully |
-| 👤 | **Profile View** | Stats, bio, and sleek symmetric media grid layouts |
-
-</div>
-
-<br/>
+| | |
+|:---:|:---|
+| 🔐 | Login & Register flows |
+| 📱 | Dynamic feed & stories |
+| ❤️ | Double-tap to like |
+| 📷 | Custom camera UI |
+| 👤 | Profile grid & stats |
 
 ---
 
-<br/>
-
-## 🎨 Visual Summary & Navigation
-
-<div align="center">
-
-| Screen | Experience Highlights |
-| :---: | :--- |
-| **🏠 Home** | Dark feed cards with rounded immersive media, snappy scroll, double-tap support |
-| **📖 Stories** | Circular avatars with the iconic warm gradient ring, horizontal scrolling |
-| **📷 Camera** | Pure black sleek UI, close action, smooth capture button layout |
-| **👤 Profile** | Clean stats hierarchy, dynamic remote placeholders, symmetrical grids |
-
-</div>
-
-<br/>
-
----
-
-<br/>
-
-## 🗺️ Interaction Map
+## 🗺️ Flow
 
 ```mermaid
-graph TD
-    A([🔑 Login]) --> B([📝 Register])
-    A --> C([📱 Bottom Tabs])
-    C --> D([🏠 Home])
-    C --> E([🔍 Search])
-    C --> F([➕ Add])
-    C --> G([👤 Profile])
-    D --> H([📷 Camera])
-    F --> H
-
-    style A fill:#1a0505,stroke:#dc2743,stroke-width:2px,color:#ffffff
-    style B fill:#1a0505,stroke:#dc2743,stroke-width:1px,color:#cccccc
-    style C fill:#050d1a,stroke:#61dafb,stroke-width:2px,color:#ffffff
-    style D fill:#051a0d,stroke:#3ddc84,stroke-width:1px,color:#cccccc
-    style E fill:#1a1a05,stroke:#f7df1e,stroke-width:1px,color:#cccccc
-    style F fill:#051a0d,stroke:#3ddc84,stroke-width:1px,color:#cccccc
-    style G fill:#150518,stroke:#bc1888,stroke-width:1px,color:#cccccc
-    style H fill:#111111,stroke:#555555,stroke-width:1px,color:#aaaaaa
+flowchart LR
+    A(["🔑 Login"]) --> C(["📱 Tabs"])
+    A --> B(["📝 Register"])
+    C --> D(["🏠 Home"])
+    C --> E(["🔍 Search"])
+    C --> F(["➕ Add"])
+    C --> G(["👤 Profile"])
+    D & F --> H(["📷 Camera"])
 ```
-
-<br/>
 
 ---
 
-<br/>
-
-## 🏗️ Project Layout
-
-```
-📦 src
- └── 📂 screens
-      ├── 🔐 LoginScreen.js       ←  Auth entry
-      ├── 📝 RegisterScreen.js    ←  User onboarding
-      ├── 🏠 HomeScreen.js        ←  Feed & Stories
-      ├── 🔍 SearchScreen.js      ←  Explore page mock
-      ├── ➕ AddScreen.js          ←  New post interceptor
-      ├── 📷 CameraScreen.js      ←  Custom camera UI
-      └── 👤 ProfileScreen.js     ←  User grid and stats
-```
-
-<br/>
-
----
-
-<br/>
-
-## 🚀 Getting Started
-
-Follow these instructions to run the application on your local machine.
-
-<br/>
-
-### `01` &nbsp; Installation
-
-> Clone the repo and install all dependencies.
+## 🚀 Quick Start
 
 ```bash
 npm install
-```
-
-<br/>
-
-### `02` &nbsp; Start Metro Bundler
-
-> Keep this terminal running in the background.
-
-```bash
 npx react-native start
-```
-
-<br/>
-
-### `03` &nbsp; Launch the App
-
-> Open a **new** terminal window and run for your target platform.
-
-**▶ &nbsp; Android**
-
-```bash
 npx react-native run-android
-```
-
-**▶ &nbsp; iOS**
-
-```bash
 npx react-native run-ios
 ```
 
-<br/>
+---
+
+## 🏗️ Structure
+
+```bash
+📦 src / screens
+  ├── LoginScreen.js
+  ├── RegisterScreen.js
+  ├── HomeScreen.js
+  ├── SearchScreen.js
+  ├── AddScreen.js
+  ├── CameraScreen.js
+  └── ProfileScreen.js
+```
 
 ---
 
-<br/>
-
 <div align="center">
 
-*✦ &nbsp; Built with* ❤️ *to celebrate visual clarity and interaction smoothness &nbsp; ✦*
-
-<br/>
-
-![footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:0d0d0d,25:1a0a2e,50:2d1b69,75:1a0a2e,100:0d0d0d&height=220&section=footer&text=Built%20with%20❤️&fontSize=26&fontColor=9d8dff&fontAlignY=55&animation=fadeIn&stroke=7c6fff&strokeWidth=1)
 
 </div>
