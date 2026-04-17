@@ -53,9 +53,6 @@ Login
 
 ```text
 src/
-	navigation/
-		MainStack.js
-		BottomTabs.js
 	screens/
 		LoginScreen.js
 		RegisterScreen.js
